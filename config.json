@@ -1,32 +1,25 @@
 {
-    "run_time": 30,
-    "results_ts_interval": 10,
-    "progress_bar": true,
-    "console_logging": false,
-    "testing": false,
-    "publish_port": 5000,
-    "rc_port": 5001,
-    "min_turrets": 1,
-    "turrets": [
-        {"name": "navigation", "cannons": 2, "rampup": 0, "script": "test_scripts/v_user.py"},
-        {"name": "random", "cannons": 2, "rampup": 0, "script": "test_scripts/v_user.py"},
-        {
-            "name": "advanced-turret",
-            "cannons": 2,
-            "rampup": 0,
-            "script": "test_scripts/v_user.py",
-            "specific_turret_config": "my_value",
-            "extra_files": [
-                "templates"
-            ]
-        }
-    ],
-    "turrets_requirements": [],
-    "extra_turret_config": {
-
-    },
-    "results_database": {
-        "db_uri": "default",
-        "params": {}
-    }
+  "run_time": 30,
+  "results_ts_interval": 10,
+  "progress_bar": true,
+  "console_logging": false,
+  "testing": false,
+  "publish_port": 5000,
+  "rc_port": 5001,
+  "min_turrets": 1,
+  "turrets": [
+    {"name": "navigation", "cannons": 2, "rampup": 0, "script": "test_scripts/navigation.py"},
+  ],
+  "turrets_requirements": [
+    "selenium"
+  ],
+  "extra_turret_config": {
+    "base_url": "http://localhost/wordpress/",
+    "user": "root",
+    "pwd": "root"
+  },
+  "results_database": {
+    "db_uri": "default",
+    "params": {}
+  }
 }
