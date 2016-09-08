@@ -8,10 +8,12 @@
   "rc_port": 5001,
   "min_turrets": 1,
   "turrets": [
-    {"name": "navigation", "cannons": 2, "rampup": 0, "script": "test_scripts/navigation.py"}
+      {"name": "navigation", "cannons": 2, "rampup": 0, "script": "test_scripts/navigation.py"},
+      {"name": "home_load", "cannons": 3, "rampup": 0, "script": "test_scripts/home_load.py"}
   ],
   "turrets_requirements": [
-    "selenium"
+      "selenium",
+      "requests"
   ],
   "extra_turret_config": {
     "base_url": "http://localhost/wordpress/",
